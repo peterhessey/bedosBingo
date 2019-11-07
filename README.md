@@ -1,6 +1,8 @@
 # Bedos Bingo Program
 
 ## How to run
+Ensure your machine has python 3.x and pip installed (using the commands `python --version` and `pip --version` ) before following these steps
+
 1. Download this repository to your machine using the 'clone or download'
 2. Go into your command prompt and navigate to the directory you downloaded the files to
 3. Run the command: `pip install -r requirements.txt`
