@@ -1,4 +1,4 @@
-# bedosBingo
+# Bedos Bingo Program
 
 ## How to run
 1. Download this repository to your machine using the 'clone or download'
