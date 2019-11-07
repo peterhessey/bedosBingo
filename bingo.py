@@ -14,8 +14,8 @@ def bingoTime(bingo_data, wait_time):
     window_width = bingo_window.get_width()
     window_height = bingo_window.get_height()
 
-    font = pygame.font.SysFont('Cambria', 100, True)
-    
+    number_font = pygame.font.SysFont('Cambria', 250, True)
+    text_font = pygame.font.SysFont('Cambria', 100, True)
 
 
     new_number = True
@@ -39,14 +39,16 @@ def bingoTime(bingo_data, wait_time):
 
             bingo_window.fill((140, 26, 255))
             
-            number_text = font.render(str(number_to_display), True, (255,255,255))
-            phrase_text = font.render(text_to_display, True, (255,255,255))
+            number_text = number_font.render(str(number_to_display), True,
+                                            (255,255,255))
+            phrase_text = text_font.render(text_to_display, True,
+                                          (255,255,255))
 
             number_pos = (window_width /2 - number_text.get_width() / 2, 
-                          window_height/2*0.8 - number_text.get_height() / 2)
+                          window_height/2*0.7 - number_text.get_height() / 2)
 
             phrase_pos = (window_width /2 - phrase_text.get_width() / 2, 
-                          window_height/2*1.2 - phrase_text.get_height() / 2)
+                          window_height/2*1.3 - phrase_text.get_height() / 2)
 
             bingo_window.blit(number_text, (number_pos))
             bingo_window.blit(phrase_text, (phrase_pos))
@@ -89,7 +91,6 @@ if __name__=='__main__':
     args = parser.parse_args()
     wait_time = int(args.wait[0])
     bingo_data = readBingoFiles()
-    print(bingo_data)
 
     bingoTime(bingo_data, wait_time)
     
