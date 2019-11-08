@@ -11,3 +11,4 @@ Ensure your machine has python 3.x and pip installed (using the commands '`pytho
 ### Controls
 -  Use the escape key to close the program at any point
 -  Press P to pause the program at any point (note that the timer does not stop when paused, i.e. when you unpause, if > 15 seconds have passed the next number will display immediately!)
+-  Once the game is complete, a final message screen will be displayed. To run the game again, simply press R!

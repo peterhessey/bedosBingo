@@ -42,7 +42,7 @@ def bingoTime(bingo_data_in, wait_time):
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_ESCAPE:
                     game_quit = True
-
+                
                 if event.key == pygame.K_p:
                     pause = not pause
 
