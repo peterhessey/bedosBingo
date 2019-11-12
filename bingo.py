@@ -8,6 +8,7 @@ import argparse
 BINGO_DATA_FILEPATH = './bingo_data.txt'
 END_GAME_MESSAGE = 'Thanks for playing Bedo\'s Bingo!'
 FONT = 'Cambria'
+BG_COLOUR = (140, 26, 255)
 
 def bingoTime(bingo_data_in, wait_time):
     """Main function, runs the bingo program using pygame.
@@ -29,6 +30,7 @@ def bingoTime(bingo_data_in, wait_time):
     window_height = bingo_window.get_height()
     number_font = pygame.font.SysFont(FONT, 250, True)
     text_font = pygame.font.SysFont(FONT, 100, True)
+    end_game_font= pygame.font.SysFont(FONT, 50, True)
 
     #loop variables
     new_number = True
@@ -89,10 +91,10 @@ def bingoTime(bingo_data_in, wait_time):
                 start_time = time.time()
 
             else:
-                bingo_window.fill((140, 26, 255))  
-                
-                end_game_text = text_font.render(str(END_GAME_MESSAGE), True,
-                                                   (255,255,255))
+                bingo_window.fill(BG_COLOUR)  
+
+                end_game_text = end_game_font.render(str(END_GAME_MESSAGE), 
+                                                     True, (255,255,255))
 
                 end_game_pos = (window_width / 2 - end_game_text.get_width() / 2,
                                 window_height/2 - end_game_text.get_height() /2)
